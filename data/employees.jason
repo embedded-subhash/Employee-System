@@ -1,0 +1,10 @@
+[
+    {
+        "employee_id": 101,
+        "name": "Subhash",
+        "email": "subhash@gmail.com",
+        "department": "Python",
+        "salary": 50000,
+        "experience": 3
+    }
+]
