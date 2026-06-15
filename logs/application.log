@@ -1,0 +1,17 @@
+2026-06-15 10:11:49,176 - INFO - Application Started
+2026-06-15 10:11:57,161 - WARNING - Invalid Login Attempt: Subhash
+2026-06-15 10:12:01,719 - INFO - Application Started
+2026-06-15 10:12:34,888 - INFO - Employee Added - ID:123
+2026-06-15 10:13:39,716 - INFO - Employee Updated - ID:1233
+2026-06-15 10:13:46,003 - INFO - Application Closed
+2026-06-15 10:17:25,304 - INFO - Application Started
+2026-06-15 10:25:05,149 - INFO - Application Started
+2026-06-15 10:25:37,526 - INFO - Application Closed
+2026-06-15 10:25:39,084 - INFO - Application Started
+2026-06-15 10:26:37,869 - INFO - Application Started
+2026-06-15 10:26:43,206 - WARNING - Invalid Login Attempt: Admin
+2026-06-15 10:26:47,330 - INFO - Application Started
+2026-06-15 10:27:15,496 - INFO - Employee Added - ID:123
+2026-06-15 10:30:12,733 - INFO - Application Started
+2026-06-15 10:40:57,424 - INFO - Application Started
+2026-06-15 10:41:06,191 - WARNING - Invalid Login Attempt: subhash
