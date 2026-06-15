@@ -1,228 +1,76 @@
-# Employee Management System
+📌**Employee Management System**
+📖 Overview
 
-## Project Overview
+The Employee Management System is a Python-based console application designed using Object-Oriented Programming principles. It simulates a real-world HR backend system where employee records can be created, managed, updated, and stored persistently using JSON.
 
-Employee Management System is a Python-based enterprise console application developed using Object-Oriented Programming principles. The system manages employee records, user authentication, role-based access control, logging, reporting, iterators, generators, and data persistence using JSON files.
+The system focuses on clean architecture, modular design, and separation of concerns, making it scalable for future enhancements such as database integration or API development.
 
-This project demonstrates professional backend development concepts commonly used in enterprise applications.
+**🎯 Objectives**
+Build a structured OOP-based backend system
+Implement CRUD operations for employee management
+Demonstrate data persistence using JSON files
+Apply real-world business logic (salary & bonus calculation)
+Follow modular and maintainable coding practices
+🏗️ **System Architecture**
 
----
+The project follows a layered modular structure:
 
-## Features
-
-### Employee Management
-
-* Add Employee
-* View Employees
-* Search Employee
-* Update Employee Salary
-* Delete Employee
-* Save Employee Data
-
-### Authentication & Authorization
-
-* User Login System
-* Role-Based Access Control
-* Admin Role
-* HR Role
-* Employee Role
-
-### Logging
-
-* Application Activity Logging
-* Invalid Login Tracking
-* Employee Operations Logging
-
-### Reports
-
-* Total Employees
-* Department Wise Report
-* Highest Salary Employee
-* Average Salary
-* Experience Statistics
-
-### Advanced Python Concepts
-
-* Custom Iterator
-* Generator
-* Decorators
-* JSON Data Handling
-* Exception Handling
-
----
-
-## Technologies Used
-
-* Python 3.x
-* Git
-* GitHub
-* Visual Studio Code
-* PostgreSQL (Learning Module)
-* Virtual Environment (venv)
-
----
-
-## Project Structure
-
-```text
+Model Layer → Defines Employee entity
+Service Layer → Handles business logic (EmployeeManager)
+Utility Layer → Provides validation and helper functions
+Data Layer → Stores persistent employee records (JSON)
+📂 **Project Structure**
 employee_system/
 │
-├── main.py
-├── README.md
-├── requirements.txt
-│
-├── data/
-│   ├── employees.json
-│   └── users.json
+├── main.py                      # Application entry point
 │
 ├── models/
-│   ├── employee.py
-│   └── user.py
+│   └── employee.py              # Employee class definition
 │
 ├── services/
-│   ├── employee_manager.py
-│   ├── auth_service.py
-│   └── report_service.py
-│
-├── decorators/
-│   └── permissions.py
+│   └── employee_manager.py     # Business logic (CRUD operations)
 │
 ├── utils/
-│   ├── helper.py
-│   ├── validator.py
-│   └── logger.py
+│   ├── validator.py            # Input validation utilities
+│   └── helper.py               # Helper functions (timestamps, formatting)
 │
-├── logs/
-│   ├── application.log
-│   └── error.log
+├── data/
+│   └── employees.json          # Persistent storage
 │
-└── Practice/
-    ├── employee_iterator.py
-    └── employee_generator.py
-```
+└── README.md                   # Project documentation
+👨‍💼 Employee Entity
 
----
+Each employee record contains the following attributes:
 
-## User Roles
-
-### Admin
-
-* Add Employee
-* Update Employee
-* Delete Employee
-* View Reports
-
-### HR
-
-* Add Employee
-* Update Employee
-* View Reports
-
-### Employee
-
-* View Employee Information
-* Restricted from Add, Update and Delete Operations
-
----
-
-## Iterator Module
-
-Custom Employee ID Iterator implemented using:
-
-* **iter**()
-* **next**()
-* StopIteration
-
----
-
-## Generator Module
-
-Employee Generator implemented using:
-
-* yield keyword
-* Memory-efficient record generation
-* Processing 100000 employee records
-
----
-
-## Virtual Environment Setup
-
-Create Virtual Environment:
-
-```bash
-python -m venv venv
-```
-
-Activate:
-
-```bash
-venv\Scripts\activate
-```
-
-Install Dependencies:
-
-```bash
-pip install requests
-```
-
-Generate Requirements File:
-
-```bash
-pip freeze > requirements.txt
-```
-
----
-
-## How to Run
-
-```bash
-python main.py
-```
-
-Login Credentials:
-
-Admin
-
-```text
-Username: admin
-Password: admin123
-```
-
-HR
-
-```text
-Username: hr
-Password: hr123
-```
-
-Employee
-
-```text
-Username: emp
-Password: emp123
-```
-
----
-
-## Author
-
-Subhash
-
----
-
-## Git Workflow
-
-Feature Branch:
-
-```bash
-git checkout -b feature/authentication-logging
-```
-
-Commit Examples:
-
-```bash
-git commit -m "feat: implement role based authentication"
-git commit -m "feat: add custom permission decorators"
-git commit -m "feat: implement application logging"
-git commit -m "feat: add employee reports module"
-```
+Employee ID
+Name
+Email
+Department
+Salary
+Experience (in years)
+⚙️ Core Functionalities
+🟢 Employee Operations
+Add new employee
+View all employees
+Search employee by ID
+Update employee details
+Delete employee record
+💰 Salary & Bonus System
+Bonus is calculated based on experience:
+Experience	Bonus Percentage
+≤ 2 years	5%
+≤ 5 years	10%
+≤ 10 years	15%
+> 10 years	20%
+Final Salary = Base Salary + Bonus
+Generates a formatted salary slip for each employee
+💾 Data Persistence
+Employee records are stored in employees.json
+Data is automatically loaded when the application starts
+Data is saved manually during exit or update operations
+Handles missing or corrupted file scenarios gracefully
+🔐**Validation Rules**
+Employee ID must be unique
+Salary must be non-negative
+Email must contain valid format (@)
+Experience must be a valid positive number
