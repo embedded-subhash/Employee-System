@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+employees = []
+
+def get_employees():
+
+    return {
+        "status": 200,
+=======
 from models.employee import Employee
 from services.employee_service import (
     add_employee,
@@ -18,10 +26,23 @@ def get_employees():
         "status": 200,
         "message": "Employees fetched successfully",
         "count": len(employees),
+>>>>>>> 2be9917ca25795c557383cb97b5bb6cb36dba3da
         "data": employees
     }
 
 
+<<<<<<< HEAD
+def get_employee(employee_id):
+
+    for emp in employees:
+
+        if emp["id"] == employee_id:
+            return {
+                "status": 200,
+                "data": emp
+            }
+
+=======
 def create_employee(data):
 
     try:
@@ -66,12 +87,60 @@ def remove_employee(employee_id):
             "message": "Employee deleted successfully"
         }
 
+>>>>>>> 2be9917ca25795c557383cb97b5bb6cb36dba3da
     return {
         "status": 404,
         "message": "Employee not found"
     }
 
 
+<<<<<<< HEAD
+def create_employee(employee):
+
+    employees.append(employee)
+
+    return {
+        "status": 201,
+        "message": "Employee created"
+    }
+
+
+def update_employee(employee_id, data):
+
+    for emp in employees:
+
+        if emp["id"] == employee_id:
+
+            emp.update(data)
+
+            return {
+                "status": 200,
+                "message": "Employee updated"
+            }
+
+    return {
+        "status": 404,
+        "message": "Employee not found"
+    }
+
+
+def delete_employee(employee_id):
+
+    for emp in employees:
+
+        if emp["id"] == employee_id:
+
+            employees.remove(emp)
+
+            return {
+                "status": 200,
+                "message": "Employee deleted"
+            }
+
+    return {
+        "status": 404,
+        "message": "Employee not found"
+=======
 def employee_report():
 
     return {
@@ -112,4 +181,5 @@ def employee_total_salary(employee_id):
     return {
         "status": 200,
         "total_salary": total
+>>>>>>> 2be9917ca25795c557383cb97b5bb6cb36dba3da
     }

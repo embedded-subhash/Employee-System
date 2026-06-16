@@ -15,4 +15,12 @@
         "salary": 2000000.0,
         "experience": 2
     }
+    [
+    {
+        "id": 101,
+        "name": "Subhash",
+        "department": "Engineering",
+        "salary": 50000
+    }
+]
 ]
